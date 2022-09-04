@@ -1,0 +1,4 @@
+<map id="User Convenience" name="User Convenience">
+<area shape="rect" id="node1" href="$group__pm.html" title="Macros visible to all files that include the library header file. Most macros are for naming constant..." alt="" coords="5,5,111,31"/>
+<area shape="rect" id="node2" title="Function&#45;like macros defined just for user convenience. Most of them are wrappers for functions and o..." alt="" coords="159,5,285,31"/>
+</map>

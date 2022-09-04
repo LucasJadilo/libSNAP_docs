@@ -1,0 +1,5 @@
+<map id="Public Macros" name="Public Macros">
+<area shape="rect" id="node1" href="$group__lib_s_n_a_p.html" title="Top&#45;level module of the libSNAP library. It enclosures all the macros, types and functions of the lib..." alt="" coords="5,5,76,31"/>
+<area shape="rect" id="node2" title="Macros visible to all files that include the library header file. Most macros are for naming constant..." alt="" coords="124,5,229,31"/>
+<area shape="rect" id="node3" href="$group__uc.html" title="Function&#45;like macros defined just for user convenience. Most of them are wrappers for functions and o..." alt="" coords="277,5,404,31"/>
+</map>

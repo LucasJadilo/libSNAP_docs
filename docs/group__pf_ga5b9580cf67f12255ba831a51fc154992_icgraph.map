@@ -1,0 +1,6 @@
+<map id="snap_calculateUserHash" name="snap_calculateUserHash">
+<area shape="rect" id="node1" title="Calculate the hash value of a byte array using a user&#45;defined algorithm." alt="" coords="367,31,533,57"/>
+<area shape="rect" id="node2" href="$group__pf.html#gaab336c6bc166a41d6e55ed571e590384" title="Select the error detection method based on the EDM bits and calculate the hash value of a frame." alt="" coords="180,31,319,57"/>
+<area shape="rect" id="node3" href="$group__pf.html#gaedbcac9ae0a675719b7349759d92cff9" title="Detect, decode, validate and store a frame, one byte at a time." alt="" coords="19,5,118,32"/>
+<area shape="rect" id="node4" href="$group__pf.html#ga1bbf49e0a5144e15a77fc0be1318a5d5" title="Encapsulate a new frame into the buffer (if there is enough space). Update the frame status and size ..." alt="" coords="5,56,132,83"/>
+</map>
