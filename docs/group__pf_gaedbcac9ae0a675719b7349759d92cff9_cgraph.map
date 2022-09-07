@@ -1,0 +1,10 @@
+<map id="snap_decode" name="snap_decode">
+<area shape="rect" id="node1" title="Detect, decode, validate and store a frame, one byte at a time." alt="" coords="5,132,104,159"/>
+<area shape="rect" id="node2" href="$group__pf.html#gaab336c6bc166a41d6e55ed571e590384" title="Select the error detection method based on the EDM bits and calculate the hash value of a frame." alt="" coords="152,107,291,133"/>
+<area shape="rect" id="node8" href="$group__pf.html#ga3e054b53f823629dac0633b01465dbb7" title="Get the content of a selected frame field." alt="" coords="170,157,273,184"/>
+<area shape="rect" id="node3" href="$group__pf.html#ga93900ad90d2b33e3cd49f1a1715f9cbb" title="Calculate the 8&#45;bit checksum of a byte array." alt="" coords="339,5,517,32"/>
+<area shape="rect" id="node4" href="$group__pf.html#ga2b8b0ff0cd927cdcf46cd066de87356b" title="Calculate the 16&#45;bit CRC of a byte array." alt="" coords="357,56,499,83"/>
+<area shape="rect" id="node5" href="$group__pf.html#ga638b8b9d3a9409581c9ecfa7dec6ca0f" title="Calculate the 32&#45;bit CRC of a byte array." alt="" coords="357,107,499,133"/>
+<area shape="rect" id="node6" href="$group__pf.html#ga4c9afce56b80dd2bb711067a6b3d27a2" title="Calculate the 8&#45;bit CRC of a byte array." alt="" coords="360,157,496,184"/>
+<area shape="rect" id="node7" href="$group__pf.html#ga5b9580cf67f12255ba831a51fc154992" title="Calculate the hash value of a byte array using a user&#45;defined algorithm." alt="" coords="345,208,511,235"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="snap_encapsulate" name="snap_encapsulate">
+<area shape="rect" id="node1" title="Encapsulate a new frame into the buffer (if there is enough space). Update the frame status and size ..." alt="" coords="5,183,132,209"/>
+<area shape="rect" id="node2" href="$group__pf.html#gaab336c6bc166a41d6e55ed571e590384" title="Select the error detection method based on the EDM bits and calculate the hash value of a frame." alt="" coords="205,107,343,133"/>
+<area shape="rect" id="node8" href="$group__pf.html#ga2d74a83e7ac411d2d76553bcc5abaf2f" title="Get the number of data bytes based on the NDB bits of the HDB1 byte." alt="" coords="183,157,365,184"/>
+<area shape="rect" id="node9" href="$group__pf.html#gaa61d3769e4d3d3ff5c6f620a9d21c361" title="Get the hash value size of the frame based on the EDM bits of the HDB1 byte." alt="" coords="180,208,368,235"/>
+<area shape="rect" id="node10" href="$group__pf.html#gac69d91b2533302686140f1afb1e0f870" title="Get the NDB bits of the HDB1 byte based on the number of data bytes (with or without padding bytes)." alt="" coords="183,259,365,285"/>
+<area shape="rect" id="node3" href="$group__pf.html#ga93900ad90d2b33e3cd49f1a1715f9cbb" title="Calculate the 8&#45;bit checksum of a byte array." alt="" coords="416,5,595,32"/>
+<area shape="rect" id="node4" href="$group__pf.html#ga2b8b0ff0cd927cdcf46cd066de87356b" title="Calculate the 16&#45;bit CRC of a byte array." alt="" coords="434,56,577,83"/>
+<area shape="rect" id="node5" href="$group__pf.html#ga638b8b9d3a9409581c9ecfa7dec6ca0f" title="Calculate the 32&#45;bit CRC of a byte array." alt="" coords="434,107,577,133"/>
+<area shape="rect" id="node6" href="$group__pf.html#ga4c9afce56b80dd2bb711067a6b3d27a2" title="Calculate the 8&#45;bit CRC of a byte array." alt="" coords="437,157,573,184"/>
+<area shape="rect" id="node7" href="$group__pf.html#ga5b9580cf67f12255ba831a51fc154992" title="Calculate the hash value of a byte array using a user&#45;defined algorithm." alt="" coords="422,208,589,235"/>
+</map>

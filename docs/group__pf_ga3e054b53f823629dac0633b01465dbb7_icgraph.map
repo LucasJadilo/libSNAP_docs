@@ -1,0 +1,4 @@
+<map id="snap_getField" name="snap_getField">
+<area shape="rect" id="node1" title="Get the content of a selected frame field." alt="" coords="152,5,255,32"/>
+<area shape="rect" id="node2" href="$group__pf.html#gaedbcac9ae0a675719b7349759d92cff9" title="Detect, decode, validate and store a frame, one byte at a time." alt="" coords="5,5,104,32"/>
+</map>

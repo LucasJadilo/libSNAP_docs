@@ -1,0 +1,4 @@
+<map id="snap_getNdbFromDataSize" name="snap_getNdbFromDataSize">
+<area shape="rect" id="node1" title="Get the NDB bits of the HDB1 byte based on the number of data bytes (with or without padding bytes)." alt="" coords="180,5,361,32"/>
+<area shape="rect" id="node2" href="$group__pf.html#ga1bbf49e0a5144e15a77fc0be1318a5d5" title="Encapsulate a new frame into the buffer (if there is enough space). Update the frame status and size ..." alt="" coords="5,5,132,32"/>
+</map>
