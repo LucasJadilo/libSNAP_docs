@@ -1,8 +1,0 @@
-<map id="snap_calculateHash" name="snap_calculateHash">
-<area shape="rect" id="node1" title="Select the error detection method based on the EDM bits and calculate the hash value of a frame." alt="" coords="5,107,144,133"/>
-<area shape="rect" id="node2" href="$group__pf.html#ga93900ad90d2b33e3cd49f1a1715f9cbb" title="Calculate the 8&#45;bit checksum of a byte array." alt="" coords="192,5,371,32"/>
-<area shape="rect" id="node3" href="$group__pf.html#ga2b8b0ff0cd927cdcf46cd066de87356b" title="Calculate the 16&#45;bit CRC of a byte array." alt="" coords="210,56,353,83"/>
-<area shape="rect" id="node4" href="$group__pf.html#ga638b8b9d3a9409581c9ecfa7dec6ca0f" title="Calculate the 32&#45;bit CRC of a byte array." alt="" coords="210,107,353,133"/>
-<area shape="rect" id="node5" href="$group__pf.html#ga4c9afce56b80dd2bb711067a6b3d27a2" title="Calculate the 8&#45;bit CRC of a byte array." alt="" coords="213,157,349,184"/>
-<area shape="rect" id="node6" href="$group__pf.html#ga5b9580cf67f12255ba831a51fc154992" title="Calculate the hash value of a byte array using a user&#45;defined algorithm." alt="" coords="198,208,365,235"/>
-</map>

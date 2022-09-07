@@ -1,6 +1,0 @@
-<map id="libSNAP" name="libSNAP">
-<area shape="rect" id="node1" title="Top&#45;level module of the libSNAP library. It enclosures all the macros, types and functions of the lib..." alt="" coords="5,55,76,80"/>
-<area shape="rect" id="node2" href="$group__pf.html" title="Functions visible to all files that include the library header file." alt="" coords="124,5,243,31"/>
-<area shape="rect" id="node3" href="$group__pm.html" title="Macros visible to all files that include the library header file. Most macros are for naming constant..." alt="" coords="131,55,236,80"/>
-<area shape="rect" id="node4" href="$group__pt.html" title="Typedefs of enums and structs visible to all files that include the library header file." alt="" coords="135,104,232,129"/>
-</map>
