@@ -86,7 +86,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">libSNAP </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_README"></a> <b>libSNAP</b> is an open source C/C++ library that implements most features of the <b>Scaleable Node Address Protocol (SNAP)</b>.</p>
+<div class="textblock"><p ><a class="anchor" id="md_README"></a> <b>libSNAP</b> is an open source C/C++ library that implements the <b>Scaleable Node Address Protocol (SNAP)</b>.</p>
 <p >Official documentation: <a href="https://lucasjadilo.github.io/libSNAP_docs/">https://lucasjadilo.github.io/libSNAP_docs/</a></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 What is SNAP?</h1>
@@ -116,13 +116,13 @@ Library features</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">Compiler   </th><th class="markdownTableHeadCenter">Version   </th><th class="markdownTableHeadCenter">Command line   </th><th class="markdownTableHeadCenter">Object size (bytes)    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">avr-gcc   </td><td class="markdownTableBodyCenter">7.3.0   </td><td class="markdownTableBodyCenter"><code>avr-gcc -mmcu=atmega328p -c -O2 <a class="el" href="snap_8c.html" title="Source file of the libSNAP library. Refer to the library documentation for details.">snap.c</a></code>   </td><td class="markdownTableBodyCenter">6.976    </td></tr>
+<td class="markdownTableBodyCenter">avr-gcc   </td><td class="markdownTableBodyCenter">7.3.0   </td><td class="markdownTableBodyCenter"><code>avr-gcc -mmcu=atmega328p -O2 -c <a class="el" href="snap_8c.html" title="Source file of the libSNAP library. Refer to the library documentation for details.">snap.c</a></code>   </td><td class="markdownTableBodyCenter">6.720    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">msp430-elf-gcc   </td><td class="markdownTableBodyCenter">9.3.1   </td><td class="markdownTableBodyCenter"><code>msp430-elf-gcc -mmcu=msp430fr5969 -c -O2 <a class="el" href="snap_8c.html" title="Source file of the libSNAP library. Refer to the library documentation for details.">snap.c</a></code>   </td><td class="markdownTableBodyCenter">8.592    </td></tr>
+<td class="markdownTableBodyCenter">msp430-elf-gcc   </td><td class="markdownTableBodyCenter">9.3.1   </td><td class="markdownTableBodyCenter"><code>msp430-elf-gcc -mmcu=msp430fr5969 -O2 -c <a class="el" href="snap_8c.html" title="Source file of the libSNAP library. Refer to the library documentation for details.">snap.c</a></code>   </td><td class="markdownTableBodyCenter">8.112    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">arm-none-eabi-gcc   </td><td class="markdownTableBodyCenter">10.3.1   </td><td class="markdownTableBodyCenter"><code>arm-none-eabi-gcc -mcpu=cortex-m0 -c -O2 <a class="el" href="snap_8c.html" title="Source file of the libSNAP library. Refer to the library documentation for details.">snap.c</a></code>   </td><td class="markdownTableBodyCenter">4.016    </td></tr>
+<td class="markdownTableBodyCenter">arm-none-eabi-gcc   </td><td class="markdownTableBodyCenter">10.3.1   </td><td class="markdownTableBodyCenter"><code>arm-none-eabi-gcc -mcpu=cortex-m0 -O2 -c <a class="el" href="snap_8c.html" title="Source file of the libSNAP library. Refer to the library documentation for details.">snap.c</a></code>   </td><td class="markdownTableBodyCenter">3.892    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">gcc (MinGW-W64)   </td><td class="markdownTableBodyCenter">12.2.0   </td><td class="markdownTableBodyCenter"><code>gcc -c -O2 <a class="el" href="snap_8c.html" title="Source file of the libSNAP library. Refer to the library documentation for details.">snap.c</a></code>   </td><td class="markdownTableBodyCenter">6.358   </td></tr>
+<td class="markdownTableBodyCenter">gcc (MinGW-W64)   </td><td class="markdownTableBodyCenter">12.2.0   </td><td class="markdownTableBodyCenter"><code>gcc -O2 -c <a class="el" href="snap_8c.html" title="Source file of the libSNAP library. Refer to the library documentation for details.">snap.c</a></code>   </td><td class="markdownTableBodyCenter">6.411   </td></tr>
 </table>
 <p >This library supports most of the frame formats described in the protocol specification, including:</p><ul>
 <li>All the destination address sizes (up to 3 bytes);</li>
@@ -131,7 +131,7 @@ Library features</h1>
 <li>All the payload sizes (up to 512 bytes);</li>
 <li>Most of the error detection methods: 8-bit checksum, 8-bit CRC, 16-bit CRC, 32-bit CRC, and a user-defined hash function.</li>
 </ul>
-<p >Each CRC function can be individually configured at compilation time to maximize performance or minimize memory usage. If the macro <code>SNAP_CRC8_TABLE</code> is defined (by command line), the 8-bit CRC algorithm will use a lookup table to speed up the calculation, thus using more memory. The same logic applies to macros <code>SNAP_CRC16_TABLE</code> and <code>SNAP_CRC32_TABLE</code> regarding 16-bit CRC and 32-bit CRC algorithms, respectively.</p>
+<p >Each CRC function can be individually configured at compilation time to maximize performance or minimize memory usage. Each CRC function can also be overridden by a user implementation, especially when a hardware implementation is available.</p>
 <p >There is no hardware-related code (e.g. serial port handling, etc). Frame transmission and reception through serial ports must be handled outside the library.</p>
 <p >The library provides functions for frame decoding, encapsulation, and decapsulation. The format of the frame is selected automatically based on the header bytes.</p>
 <p >Despite the efforts to cover all the protocol features, the library has some limitations:</p><ul>
@@ -145,17 +145,20 @@ Library features</h1>
 </ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
 How to use</h1>
-<p >The library consists of only a header file (<code><a class="el" href="snap_8h.html" title="Header file of the libSNAP library. Refer to the library documentation for details.">src/snap.h</a></code>) and a source file (<code><a class="el" href="snap_8c.html" title="Source file of the libSNAP library. Refer to the library documentation for details.">src/snap.c</a></code>). To use it in your projects, you must include the header file in the sources that will need it, and compile the library source file along with your other sources.</p>
-<p >There are some code examples in the folder <code>src/examples/</code> that demonstrate the main features of the library:</p><ul>
-<li>Example 1: Frame encapsulation;</li>
-<li>Example 2: Frame decoding and decapsulation;</li>
-<li>Example 3: User-defined hash function (CRC-24/OPENPGP);</li>
-<li>Example 4: Function-like macros.</li>
+<p >The library consists of only a header file (<a href="https://github.com/LucasJadilo/libSNAP/blob/main/src/snap.h"><b>src/snap.h</b></a>) and a source file (<a href="https://github.com/LucasJadilo/libSNAP/blob/main/src/snap.c"><b>src/snap.c</b></a>). To use it in your projects, you must include the header file in the sources that will need it, and compile the library source file along with your other sources.</p>
+<p >If the macro <code>SNAP_CRC8_TABLE</code> is defined (by command line), the 8-bit CRC algorithm will use a lookup table to speed up the calculation, thus using more memory. The same logic applies to macros <code>SNAP_CRC16_TABLE</code> and <code>SNAP_CRC32_TABLE</code> regarding 16-bit CRC and 32-bit CRC algorithms, respectively.</p>
+<p >All the hash function definitions have a <code>__attribute__((weak))</code> to make them overridable. If your compiler does not support this feature (e.g. "undefined
+reference" errors), you can disable it by defining the macro <code>SNAP_DISABLE_WEAK</code>. In this case, you can still override each function individually by defining the macros <code>SNAP_OVERRIDE_CRC8</code>, <code>SNAP_OVERRIDE_CRC16</code>, <code>SNAP_OVERRIDE_CRC32</code>, and <code>SNAP_OVERRIDE_USER_HASH</code>.</p>
+<p >There are some code examples in the folder <a href="https://github.com/LucasJadilo/libSNAP/tree/main/src/examples"><b>src/examples/</b></a> that demonstrate the main features of the library:</p><ul>
+<li><a href="https://github.com/LucasJadilo/libSNAP/blob/main/src/examples/example1.c">Example 1</a>: Frame encapsulation;</li>
+<li><a href="https://github.com/LucasJadilo/libSNAP/blob/main/src/examples/example2.c">Example 2</a>: Frame decoding and decapsulation;</li>
+<li><a href="https://github.com/LucasJadilo/libSNAP/blob/main/src/examples/example3.c">Example 3</a>: User-defined hash function (CRC-24/OPENPGP);</li>
+<li><a href="https://github.com/LucasJadilo/libSNAP/blob/main/src/examples/example4.c">Example 4</a>: Function-like macros.</li>
 </ul>
-<p >Every function of the library was tested using the <a href="https://github.com/ThrowTheSwitch/Unity">Unity</a> framework. You can find all the test cases in <code>test/test_snap.c</code>.</p>
-<p >This project has only one <code>makefile</code>, which can be used to build and run all the examples and unit tests. It is necessary to have <b>GNU Make</b> and <b>GCC</b> installed. Upon compilation, the folder <code>build/</code> will be created with all the object files and executables. The available commands are listed below:</p><ul>
+<p >Every function of the library was tested using the <a href="https://github.com/ThrowTheSwitch/Unity"><b>Unity</b></a> framework. You can find all the test cases in <a href="https://github.com/LucasJadilo/libSNAP/blob/main/test/test_snap.c"><b>test/test_snap.c</b></a>.</p>
+<p >This project has only one <b>makefile</b>, which can be used to build and run all the examples and unit tests. It is necessary to have <b>GNU Make</b> and <b>GCC</b> installed. Upon compilation, the folder <b>build/</b> will be created with all the object files and executables. The available commands are listed below:</p><ul>
 <li><code>make all</code>: Builds all the examples and unit tests;</li>
-<li><code>make clean</code>: Deletes the folder <code>build/</code> and everything in it;</li>
+<li><code>make clean</code>: Deletes the folder <b>build/</b> and everything in it;</li>
 <li><code>make test</code>: Builds and runs the unit tests;</li>
 <li><code>make exampleN</code>: Builds and runs the code example <em>N</em> (e.g. <code>make example1</code> runs the code example 1);</li>
 <li><code>make doc</code>: Builds the whole HTML documentation of the library (requires <b>Doxygen</b> and <b>Graphviz</b> installed);</li>

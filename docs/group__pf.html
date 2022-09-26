@@ -710,7 +710,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Calculate the 8-bit CRC of a byte array. </p>
-<p >If the macro <code>SNAP_CRC8_TABLE</code> is defined, the function will use a 256-byte lookup table to speed up the calculation. The algorithm can be described according to the Rocksoft^tm Model CRC Algorithm by Ross Williams: </p><table class="markdownTable">
+<p >This "weak" function can be overridden by a user implementation, especially when a hardware implementation is available. If the macro <code>SNAP_CRC8_TABLE</code> is defined, this function will use a 256-byte lookup table to speed up the calculation. If the macro <code>SNAP_DISABLE_WEAK</code> is defined, this function becomes a "strong" definition, so the only way to override it is to define the macro <code>SNAP_OVERRIDE_CRC8</code>. The algorithm can be described according to the Rocksoft^tm Model CRC Algorithm by Ross Williams: </p><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">Name   </th><th class="markdownTableHeadCenter">Width   </th><th class="markdownTableHeadCenter">Poly   </th><th class="markdownTableHeadCenter">Init   </th><th class="markdownTableHeadCenter">RefIn   </th><th class="markdownTableHeadCenter">RefOut   </th><th class="markdownTableHeadCenter">XorOut   </th><th class="markdownTableHeadCenter">Check    </th></tr>
 <tr class="markdownTableRowOdd">
@@ -765,7 +765,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Calculate the 16-bit CRC of a byte array. </p>
-<p >If the macro <code>SNAP_CRC16_TABLE</code> is defined, the function will use a 512-byte lookup table to speed up the calculation. The algorithm can be described according to the Rocksoft^tm Model CRC Algorithm by Ross Williams: </p><table class="markdownTable">
+<p >This "weak" function can be overridden by a user implementation, especially when a hardware implementation is available. If the macro <code>SNAP_CRC16_TABLE</code> is defined, this function will use a 512-byte lookup table to speed up the calculation. If the macro <code>SNAP_DISABLE_WEAK</code> is defined, this function becomes a "strong" definition, so the only way to override it is to define the macro <code>SNAP_OVERRIDE_CRC16</code>. The algorithm can be described according to the Rocksoft^tm Model CRC Algorithm by Ross Williams: </p><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">Name   </th><th class="markdownTableHeadCenter">Width   </th><th class="markdownTableHeadCenter">Poly   </th><th class="markdownTableHeadCenter">Init   </th><th class="markdownTableHeadCenter">RefIn   </th><th class="markdownTableHeadCenter">RefOut   </th><th class="markdownTableHeadCenter">XorOut   </th><th class="markdownTableHeadCenter">Check    </th></tr>
 <tr class="markdownTableRowOdd">
@@ -820,7 +820,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Calculate the 32-bit CRC of a byte array. </p>
-<p >If the macro <code>SNAP_CRC32_TABLE</code> is defined, the function will use a 1024-byte lookup table to speed up the calculation. The algorithm can be described according to the Rocksoft^tm Model CRC Algorithm by Ross Williams: </p><table class="markdownTable">
+<p >This "weak" function can be overridden by a user implementation, especially when a hardware implementation is available. If the macro <code>SNAP_CRC32_TABLE</code> is defined, this function will use a 1024-byte lookup table to speed up the calculation. If the macro <code>SNAP_DISABLE_WEAK</code> is defined, this function becomes a "strong" definition, so the only way to override it is to define the macro <code>SNAP_OVERRIDE_CRC32</code>. The algorithm can be described according to the Rocksoft^tm Model CRC Algorithm by Ross Williams: </p><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">Name   </th><th class="markdownTableHeadCenter">Width   </th><th class="markdownTableHeadCenter">Poly   </th><th class="markdownTableHeadCenter">Init   </th><th class="markdownTableHeadCenter">RefIn   </th><th class="markdownTableHeadCenter">RefOut   </th><th class="markdownTableHeadCenter">XorOut   </th><th class="markdownTableHeadCenter">Check    </th></tr>
 <tr class="markdownTableRowOdd">
@@ -875,7 +875,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Calculate the hash value of a byte array using a user-defined algorithm. </p>
-<p >This "weak" function is supposed to be overridden by a user implementation. It will be selected and called automatically by the function <a class="el" href="group__pf.html#gaab336c6bc166a41d6e55ed571e590384" title="Select the error detection method based on the EDM bits and calculate the hash value of a frame.">snap_calculateHash()</a> when the EDM value is equal to <a class="el" href="group__pt.html#gga4c3e0f17b799bd24d79f8eda08f3ec8ca1549d9fb1519ffd38c0a2650b28af407">SNAP_HDB1_EDM_USER_SPECIFIED</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This "weak" function is supposed to be overridden by a user implementation. It will be selected and called automatically by the function <a class="el" href="group__pf.html#gaab336c6bc166a41d6e55ed571e590384" title="Select the error detection method based on the EDM bits and calculate the hash value of a frame.">snap_calculateHash()</a> when the EDM value is equal to <a class="el" href="group__pt.html#gga4c3e0f17b799bd24d79f8eda08f3ec8ca1549d9fb1519ffd38c0a2650b28af407">SNAP_HDB1_EDM_USER_SPECIFIED</a>. If the macro <code>SNAP_DISABLE_WEAK</code> is defined, this function becomes a "strong" definition, so the only way to override it is to define the macro <code>SNAP_OVERRIDE_USER_HASH</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Pointer to the byte array used in the calculation. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Number of bytes used in the calculation. </td></tr>
